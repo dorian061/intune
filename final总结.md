@@ -170,7 +170,7 @@ DA就用android store app这种类型推应用，用company portal收log</li>
 设备端首先从以下路径下载并运行power shell脚本<code>C:\Program Files (x86)\Microsoft Intune Management Extension\Policies\Scripts\UserGUID_ScriptGUID.ps1</code><br>
 运行结果可以在以下路径找到<code>C:\Program Files (x86)\Microsoft Intune ManagmentExtension\Policies\Results\UserGUID_ScriptGUID.output|.error|.timeout</code><br>
 运行成功后results文件会被自动清除，这个时候可以去注册表中查看posershell脚本的状态，<code>HKLM\SOFTWARE\Microsoft\IntuneManagementExtension\Policies\UserGUI D\ScriptGUID</code>，找到对应policy ID的power shell脚本，会有脚本的下载次数，运行结果和error code。<br>
-然后我们可以查看IME log，用policy ID去找到这条出错的powershell脚本，看到他的error message。<br>
+然后我们可以查看IME log，用policy ID去找到这条出错的powershell脚本，看到他的fail detail。<br>
 我们还可以手动运行这个powershell脚本，如果是在系统上下文，我们就可以借助pstool看看运行报错内容，如果是用户上下文，那么久直接打开powershell.exe，运行PS1文件。</li>
 </ul>
 </li>
